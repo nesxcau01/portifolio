@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<script>try{if(localStorage.getItem("tema")==="claro")document.documentElement.setAttribute("data-theme","light")}catch(e){}</script>
+</head>
+<body>
+
+
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="navbar">
+
+    <div class="nav-top">
+      <div class="nav-buttons">
+        <button class="btn-status">
+          <span class="dot"></span> <span data-i18n="status">DISPONÍVEL</span>
+        </button>
+        <button class="btn-theme" id="btnTema" type="button" title="Modo claro" aria-label="Modo claro">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+        </button>
+        <button class="btn-lang" id="btnLang" type="button" title="Translate to English" aria-label="Translate to English">
+          <svg class="globe-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"></circle>
+            <ellipse cx="12" cy="12" rx="4" ry="9"></ellipse>
+            <path d="M3 9 H21"></path>
+            <path d="M3 15 H21"></path>
+          </svg>
+          <span class="lang-label">PT</span>
+        </button>
+        <button class="btn-cv" type="button" onclick="window.open('curriculo.pdf', '_blank')">
+          <span data-i18n="cv">CURRÍCULO</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#sobre" data-i18n="nav_sobre">01 SOBRE MIM</a>
+      <span class="separator">·</span>
+      <a href="#skills" data-i18n="nav_skills">02 SKILLS</a>
+      <span class="separator">·</span>
+      <a href="#projetos" data-i18n="nav_projetos">03 PROJETOS</a>
+      <span class="separator">·</span>
+      <a href="#contato" data-i18n="nav_contato">04 CONTATO</a>
+    </nav>
+  </div>
+
+  <div class="banner">
+    <div class="role-tag">
+      <span class="role-line"></span>
+      <span class="role-text" data-i18n="role">DESENVOLVEDOR</span>
+    </div>
+    <h1 class="hero-name">
+      <span class="name-fill" id="nameIsaque">ISAQUE</span>
+      <span class="name-outline">CARDOSO</span>
+    </h1>
+
+    <div class="scroll-indicator">
+      <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+      <span data-i18n="scroll">ROLE PARA VER</span>
+    </div>
+  </div>
+
+  <section id="sobre" class="section">
+    <div class="side-label">
+      <span class="side-line"></span>
+      <span class="side-text" data-i18n="side_sobre">PORTFÓLIO PESSOAL</span>
+      <span class="side-line"></span>
+    </div>
+    <div class="section-heading">
+      <span class="section-number">01</span>
+      <span class="section-line"></span>
+      <span class="section-title" data-i18n="title_sobre">SOBRE MIM</span>
+    </div>
+    <h2 class="section-big-title">
+      <span class="title-fill" data-i18n="big_sobre_1">SOBRE</span> <span class="title-outline" data-i18n="big_sobre_2">MIM</span>
+    </h2>
+    <span class="section-underline"></span>
+    <div class="section-body">
+      <div class="section-text-group">
+        <p class="section-text" data-i18n="bio1">Tenho 17 anos e sou estudante do segundo ano do ensino técnico em Informática no COTEMIG, com foco no desenvolvimento de interfaces modernas usando HTML5 e CSS, programação orientada a objetos com Java e C#, e gerenciamento de bancos de dados com MySQL, sempre buscando entender não só o "como", mas também o "porquê" por trás de cada solução.</p>
+        <p class="section-text" data-i18n="bio2">Além disso, tenho experiência prática em manutenção, diagnóstico e montagem de computadores e celulares, unindo visão técnica de software e hardware. Essa combinação me dá uma perspectiva mais completa de como os sistemas funcionam de ponta a ponta.</p>
+      </div>
+      <div class="section-text-group">
+        <p class="section-text" data-i18n="bio3">Minha vivência em atendimento ao cliente me deu comunicação assertiva, inteligência emocional sob pressão e forte aptidão para o trabalho em equipe, sempre buscando resolver problemas com agilidade e manter um bom relacionamento com quem está do outro lado.</p>
+        <p class="section-text" data-i18n="bio4">Vivi um mês imerso nos Estados Unidos, o que ampliou minha fluência em inglês e minha visão sobre diferentes formas de trabalhar e me comunicar. Sou motivado, proativo e busco evoluir continuamente no mercado de TI, sempre em busca de novos desafios e aprendizado, com vontade de colocar a mão na massa em projetos reais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="side-label">
+      <span class="side-line"></span>
+      <span class="side-text" data-i18n="side_skills">SKILLS</span>
+      <span class="side-line"></span>
+    </div>
+    <div class="section-heading">
+      <span class="section-number">02</span>
+      <span class="section-line"></span>
+      <span class="section-title" data-i18n="title_skills">SKILLS</span>
+    </div>
+    <h2 class="section-big-title">
+      <span class="title-fill" data-i18n="big_skills_1">MINHAS</span> <span class="title-outline" data-i18n="big_skills_2">SKILLS</span>
+    </h2>
+    <span class="section-underline"></span>
+
+    <div class="skills-body">
+      <div class="skills-list">
+        <div class="skill-item">
+          <div class="skill-item-top">
+            <span class="skill-number">01</span>
+            <span class="skill-name" data-i18n="skill_manut">Manutenção de computadores</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar-track">
+            <span class="skill-bar-fill" style="--target: 80%; transition-delay: 0s;"></span>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top">
+            <span class="skill-number">02</span>
+            <span class="skill-name">HTML</span>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar-track">
+            <span class="skill-bar-fill" style="--target: 60%; transition-delay: 0.12s;"></span>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top">
+            <span class="skill-number">03</span>
+            <span class="skill-name">CSS</span>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="skill-bar-track">
+            <span class="skill-bar-fill" style="--target: 60%; transition-delay: 0.24s;"></span>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top">
+            <span class="skill-number">04</span>
+            <span class="skill-name">MySQL</span>
+            <span class="skill-percent">50%</span>
+          </div>
+          <div class="skill-bar-track">
+            <span class="skill-bar-fill" style="--target: 50%; transition-delay: 0.36s;"></span>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top">
+            <span class="skill-number">05</span>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percent">30%</span>
+          </div>
+          <div class="skill-bar-track">
+            <span class="skill-bar-fill" style="--target: 30%; transition-delay: 0.48s;"></span>
+          </div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-item-top">
+            <span class="skill-number">06</span>
+            <span class="skill-name">C#</span>
+            <span class="skill-percent">30%</span>
+          </div>
+          <div class="skill-bar-track">
+            <span class="skill-bar-fill" style="--target: 30%; transition-delay: 0.6s;"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-skills">
+        <span class="soft-skills-title" data-i18n="soft_title">SOFT-SKILLS</span>
+        <div class="soft-skill-item"><span class="soft-skill-prefix">//</span> <span data-i18n="soft1">INGLÊS - INTERMEDIÁRIO</span></div>
+        <div class="soft-skill-item"><span class="soft-skill-prefix">//</span> <span data-i18n="soft2">APRENDIZADO RÁPIDO</span></div>
+        <div class="soft-skill-item"><span class="soft-skill-prefix">//</span> <span data-i18n="soft3">COMUNICAÇÃO VERBAL E ESCRITA</span></div>
+        <div class="soft-skill-item"><span class="soft-skill-prefix">//</span> <span data-i18n="soft4">PROATIVIDADE</span></div>
+        <div class="soft-skill-item"><span class="soft-skill-prefix">//</span> <span data-i18n="soft5">RACIOCÍNIO LÓGICO</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="section">
+    <div class="side-label">
+      <span class="side-line"></span>
+      <span class="side-text" data-i18n="side_projetos">PROJETOS</span>
+      <span class="side-line"></span>
+    </div>
+    <div class="section-heading">
+      <span class="section-number">03</span>
+      <span class="section-line"></span>
+      <span class="section-title" data-i18n="title_projetos">PROJETOS</span>
+    </div>
+    <h2 class="section-big-title">
+      <span class="title-fill" data-i18n="big_proj_1">MEUS</span> <span class="title-outline" data-i18n="big_proj_2">PROJETOS</span>
+    </h2>
+    <span class="section-underline"></span>
+
+    <div class="projects-grid">
+      <a class="project-card" href="https://nesxcau01.github.io/lading-page/" target="_blank" rel="noopener noreferrer" style="transition-delay: 0s;">
+        <div class="project-window-bar">
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-url-line"></span>
+        </div>
+        <div class="project-preview">
+          <div class="project-lines">
+            <span class="project-line"></span>
+            <span class="project-line short"></span>
+          </div>
+          <span class="project-title-badge">LANDING PAGE</span>
+          <span class="project-shape"></span>
+        </div>
+        <div class="project-footer">
+          <span class="project-tag">// HTML · CSS</span>
+        </div>
+      </a>
+
+      <a class="project-card" href="https://nesxcau01.github.io/card/" target="_blank" rel="noopener noreferrer" style="transition-delay: 0.15s;">
+        <div class="project-window-bar">
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-dot"></span>
+          <span class="project-url-line"></span>
+        </div>
+        <div class="project-preview">
+          <div class="project-lines">
+            <span class="project-line"></span>
+            <span class="project-line short"></span>
+          </div>
+          <span class="project-title-badge">CENTRAL CARDS</span>
+          <span class="project-shape"></span>
+        </div>
+        <div class="project-footer">
+          <span class="project-tag">// HTML · CSS</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <div class="section-heading">
+      <span class="section-number">04</span>
+      <span class="section-line"></span>
+      <span class="section-title" data-i18n="title_contato">CONTATO</span>
+    </div>
+    <h2 class="section-big-title section-big-title--linha-unica">
+      <span class="title-fill" data-i18n="big_cont_1">ENTRE EM</span> <span class="title-outline" data-i18n="big_cont_2">CONTATO</span>
+    </h2>
+
+    <div class="contact-body">
+      <form class="contact-form" id="formContato" novalidate>
+        <div class="contact-form-row">
+          <input type="text" name="name" required class="contact-input" placeholder="Nome:" data-i18n-placeholder="ph_nome">
+          <input type="email" name="email" required class="contact-input" placeholder="Email:" data-i18n-placeholder="ph_email">
+        </div>
+        <textarea name="message" required class="contact-textarea" placeholder="Digite sua mensagem..." data-i18n-placeholder="ph_msg"></textarea>
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+        <button type="submit" class="contact-submit" data-i18n="enviar">ENVIAR</button>
+        <p class="contact-status" id="statusContato" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-info">
+        <span class="contact-info-title" data-i18n="fale">// FALE COMIGO</span>
+        <p class="contact-info-text" data-i18n="fale_txt">Vamos conversar sobre projetos, oportunidades<br>ou qualquer ideia que tiver em mente.<br>Estou sempre aberto a novas conexões.</p>
+
+        <span class="contact-social-title" data-i18n="redes">MINHAS REDES:</span>
+        <div class="contact-social-list">
+          <a class="contact-social-item" href="https://github.com/nesxcau01" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"></path>
+            </svg>
+            <span>GITHUB</span>
+          </a>
+          <a class="contact-social-item" href="https://www.instagram.com/isaquecardoso__/" target="_blank" rel="noopener noreferrer">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+            </svg>
+            <span>INSTAGRAM</span>
+          </a>
+        </div>
+
+        <div class="contact-phone">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>// +55 31 98514-4640</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-name">ISAQUE CARDOSO<span class="footer-dot"></span></div>
+        <div class="footer-tagline" data-i18n="f_tag">PORTFÓLIO PESSOAL // 2026</div>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-heading" data-i18n="f_nav">// NAVEGAÇÃO</span>
+        <nav class="footer-links">
+          <a href="#sobre" data-i18n="f_sobre">SOBRE MIM</a>
+          <a href="#skills" data-i18n="f_skills">SKILLS</a>
+          <a href="#projetos" data-i18n="f_proj">PROJETOS</a>
+          <a href="#contato" data-i18n="f_cont">CONTATO</a>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <span class="footer-heading" data-i18n="f_contato">// CONTATO</span>
+        <div class="footer-phone">
+          <svg class="footer-phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          <span>+55 31 98514-4640</span>
+        </div>
+        <div class="footer-socials">
+          <a class="footer-social" href="https://github.com/nesxcau01" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48v-1.69c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.33.85 0 1.7.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"></path>
+            </svg>
+          </a>
+          <a class="footer-social" href="https://www.instagram.com/isaquecardoso__/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom" data-i18n="f_bottom">© 2026 ISAQUE CARDOSO — TODOS OS DIREITOS RESERVADOS</div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
